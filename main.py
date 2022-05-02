@@ -92,9 +92,9 @@ else:
   output = 'You are Diabetic'
 st.title(output)
 
-st.subheader('Accuracy without smote: ')
-st.write(str(accuracy_score(y_test, rf.predict(x_test))*100)+'%')
 st.subheader('Accuracy with smote: ')
+st.write(str(accuracy_score(y_test, rf.predict(x_test))*100)+'%')
+st.subheader('Accuracy with smote and traintestsplit: ')
 st.write(str(accuracy_score(y_test_smote, rf.predict(x_test_smote))*100)+'%')
 
 
